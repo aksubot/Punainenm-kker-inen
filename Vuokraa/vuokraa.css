@@ -185,22 +185,6 @@ body{
     height: 80px;
 }
 
-.bg_item{
-    width: calc(2% + 100.14px);
-    height: 50px;
-    position: absolute;
-    right: 11%;
-
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 5px;
-
-    transition: all 0.3s;
-
-    box-shadow: var(--shadow), 0px 0px 10px hsla(0, 0%, 0%, 2);
-    backdrop-filter: blur(2px);
-}
-
 .navButton{
     background: transparent;
     font: var(--h2);
@@ -323,7 +307,7 @@ body{
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-around;
 
     border-radius: 5px;
@@ -428,6 +412,11 @@ body{
     .HH_Card{
         width: 100%;
         transition-delay: 0ms !important;
+    }
+
+    .text{
+        flex-direction: column;
+        text-align: center;
     }
  
     .HH_img{
