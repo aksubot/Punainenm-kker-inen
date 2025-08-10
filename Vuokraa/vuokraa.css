@@ -1,0 +1,524 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --bg-dark: oklch(0.94 0 20);
+    --bg: oklch(0.96 0 20);
+    --bg-light: oklch(1 0 20);
+    --text: oklch(0.15 0 20);
+    --text-muted: oklch(0.4 0 20);
+    --highlight: oklch(1 0 20);
+    --border: oklch(0.6 0 20);
+    --border-muted: oklch(0.7 0 20);
+    --primary: oklch(0.4 0.1 20);
+    --secondary: oklch(0.4 0.1 200);
+    --danger: oklch(0.5 0.05 30);
+    --warning: oklch(0.5 0.05 100);
+    --success: oklch(0.5 0.05 160);
+    --info: oklch(0.5 0.05 260);
+    --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+
+    --ff: "DM Sans", sans-serif;
+    --ff-fancy: "Book Antiqua";
+
+    --h1: bold 2.5rem/1.4em var(--ff);
+    --h2: bold 1rem/1.4em var(--ff);
+    --p: 1rem/1.4em var(--ff);
+    --p2: .875rem/1.4em var(--ff);
+    
+    --gray100: hsl(0, 0, 100);
+    --gray70: hsl(0, 0, 70);
+    --gray0: hsl(0, 0, 0);
+}
+
+body.dark{
+    --bg-dark: oklch(0.1 0 20);
+    --bg: oklch(0.15 0 20);
+    --bg-light: oklch(0.2 0 20);
+    --text: oklch(0.96 0 20);
+    --text-muted: oklch(0.76 0 20);
+    --highlight: oklch(0.5 0 20);
+    --border: oklch(0.4 0 20);
+    --border-muted: oklch(0.3 0 20);
+    --primary: oklch(0.76 0.1 20);
+    --secondary: oklch(0.76 0.1 200);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160); 
+    --info: oklch(0.7 0.05 260);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', Helvetica, Arial, sans-serif;
+
+    overflow-y:initial;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-x: clip !important;    
+
+    background-image: url("../kuvat/punainen-puu-tausta-käännetty.jpg");
+    background-size: 400px;
+}
+.overlay{
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background-color: #000000;
+    color: #333333;
+    top: 0;
+    left: -100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+    display: flex;
+
+    padding-top: 200px;
+
+    cursor: pointer;
+
+    display: none;
+}
+.overlay-is-active{
+    opacity: 0.3;
+    visibility: visible;
+
+    display: block;
+}
+
+.hidden{
+    opacity: 0;
+    transform: translateX(-10%);
+    filter: blur(5px);
+    transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+    
+}
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+}
+
+
+/*#region NAVBAR*/
+
+.navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    user-select: none;
+    position: fixed;
+
+    list-style: none;
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* #region LIPUT */
+
+
+.liput{
+    width: 190px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11%;
+}
+
+.liputCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liputCont button{
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border: 0px solid transparent;
+    transition: all .3s ease, border .1s ease;
+    box-shadow: var(--shadow), 0px 0px 6px hsla(0, 0%, 0%, 0.6);
+}
+
+.liputCont button:hover{
+    border: 1px solid #fff;
+    scale: 1.3 1.3;
+
+}
+/* #endregion */
+
+.navbar__menu{
+    z-index: 999;
+    position: absolute;
+    right: calc(11% + 10px);
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.bg_item{
+    width: calc(2% + 100.14px);
+    height: 50px;
+    position: absolute;
+    right: 11%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+
+    transition: all 0.3s;
+
+    box-shadow: var(--shadow), 0px 0px 10px hsla(0, 0%, 0%, 2);
+    backdrop-filter: blur(2px);
+}
+
+.navButton{
+    background: transparent;
+    font: var(--h2);
+    color: #000000;
+    letter-spacing: 1px;
+    transform: translate(0, 10%);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    text-shadow: 0px 0px 5px hsla(0, 0%, 100%, .4);
+}
+
+.navButton:hover{
+    scale: 1.1 1.1;
+}
+
+/*#endregion*/
+
+/* #region FIRST */
+
+.first{
+    background: #FFF;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px 5px 0 0;
+
+    margin-top: 80px;
+}
+
+.firstCont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 7% 7%;
+    padding-bottom: 0;
+}
+
+.firstCont h1{
+    font: var(--h1);
+    text-align: left;
+    width: 100%;
+}
+
+.firstCont button{
+    background-color: #E22222;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 170px;
+    margin: 30px 0;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+
+    transition: all 0.2s ease;
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: turquoise;
+        transition: all .3s;
+        z-index: -1;
+    }
+    &:hover {
+        color: #1d1d1d;
+        &:before {
+        width: 100%;
+        }
+    }
+}
+
+.firstCont a{
+    width: fit-content;
+    margin: auto;
+}
+
+/* #endregion */
+
+/* #region HH */
+
+
+.HH_Cards{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.row, .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45%;
+    width: 100%;
+
+}
+
+.HH_Card{
+    width: 48%;
+
+    height: 100%;
+    padding: 30px 0;
+    margin: 10px 0;
+
+    box-shadow: var(--shadow), 0px 0px 5px hsla(0, 0%, 0%, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 5px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+}
+
+.HH_Card h2{
+    font: var(--h2);
+    padding: 0 20px;
+    width: calc(100% - 90px);
+}
+
+.HH_Card i{
+    margin: 30px;
+    font-size: 30px;
+}
+
+.HH_img{
+    width: 48%;
+    height: 100%;
+    background-image: url(../kuvat/punainen_mökkeröinen.jpg);
+    background-position: center;
+    background-size: cover;
+
+    margin: 10px 0;
+    border-radius: 5px;
+
+    box-shadow: var(--shadow), 0px 0px 5px hsla(0, 0%, 0%, 0.06);
+}
+
+/* #endregion */
+
+/* #region YHTEYSTIEDOT */
+
+
+.yhteystiedot{
+    height: 50vh;
+    width: 80%;
+    display: flex;
+    background: var(--bg-dark);
+    margin: auto;
+    border-radius: 0 0 5px 5px;
+
+    margin-bottom: 80px;
+}
+
+.ytCont{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 7% ;
+}
+
+.ytLeft{
+
+    display: flex;
+
+    width: 70%;
+}
+
+
+.yts{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.ytLeft h1{
+    font: var(--p);
+    font-weight: bold;
+}
+
+.yts h2{
+    font: var(--p);
+}
+
+.yt{
+    width: 100%;
+    margin: 5px 0;
+}
+
+.ytRight{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.ytRight img{
+    width: 70%;
+    height: auto;
+}
+
+/* #endregion */
+
+@media(max-width: 1000px){
+    .HH_Card{
+        width: 100%;
+        transition-delay: 0ms !important;
+    }
+ 
+    .HH_img{
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        transition-delay: 0ms !important;
+    }
+
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .row:nth-child(2){
+        flex-direction: column-reverse;
+    }
+
+    .HH_Cards{
+        height: fit-content;
+    }
+}
+
+@media (max-width: 800px){
+    .first,  .yhteystiedot{
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px){
+    .first, .yhteystiedot{
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    body{
+        background-color: #fff;
+        background-image: none;
+    }
+
+    .liput{
+        left: 6%;
+    }
+
+    .navbar__menu{
+        right: 6%;
+    }
+}
+
+@media (max-width: 600px){
+    .yhteystiedot{
+        height: 70vh;
+    }
+
+    .ytCont{
+        flex-wrap: wrap;
+    }
+
+    .ytLeft{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .ytRight{
+        width: 100%;
+        height: 40%;
+
+        justify-content: center;
+    }
+
+    .ytRight img{
+        height: 100%;
+        width: auto;
+    }
+
+
+    .yts{
+        width: 100%;
+        text-align: center;
+    }
+
+    .yts:nth-child(2){margin-top: 20px;}
+
+}
+
+@media (max-width: 400px){
+    .liput{
+        width: 170px;
+    }
+}
+
+@media(max-width: 350px){
+    .liput{
+        width: 160px;
+        left: 3%;
+    }
+
+    .navbar__menu{
+        right: 3%;
+    }
+}
+

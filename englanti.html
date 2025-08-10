@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&B Punainen Tupa</title>
+
+    <script src="https://kit.fontawesome.com/adb18ef55b.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- <div class="navOverlay"></div> -->
+            <!-- <a href="index.html" class="navbar__logo">
+                <img id="navbarLogo" src="../kuvat/B&B Punainen Tupa Logo.jpg" alt="">
+            </a> -->
+            <div class="navbarTextCont">
+                <h2 id="menuText">MENU</h2>
+            </div>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="liput">
+                <div class="liputCont">
+                        <a href="./index.html"><img src="../kuvat/suomen_lippu.gif" alt=""></a>
+                        <a href="./ruotsi.html"><img src="../kuvat/ruotsin_lippu.gif" alt=""></a>
+                        <a href="./englanti.html"><img src="../kuvat/lippu_englanti.gif" alt=""></a>
+                        <a href="./saksa.html"><img src="../kuvat/lippu_saksa_06.gif" alt=""></a>
+                        <a href="./venäjä.html"><img src="../kuvat/lippu_venäjä.gif" alt=""></a>
+                </div>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#MV" class="navbar__links">
+                            Rooms
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#hinnat" class="navbar__links">
+                            Prices
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#ML" class="navbar__links">
+                            We offer
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#sijainti" class="navbar__links">
+                            Location
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#HH" class="navbar__links">
+                            Good to know
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#yt" class="navbar__links">
+                            Contacts
+                        </a>
+                    </div>
+                </li>
+                <li class="" style="list-style: none;">
+                    <div class="navbarText">
+                        <a href="./Vuokraa/englanti.html" class="">
+                            <button class="navButton">
+                                Rent a cottage
+                            </button>
+                        </a>
+                    </div>
+                </li>
+                <div class="overlay"></div>
+            </ul>
+            <!-- <div class="progressCont">
+                <div class="progressBar" id="progressBar"></div>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="first">
+        <div class="firstCont">
+            <h1 class="hidden">Welcome to Punainen Tupa (Red Cottage)</h1>
+            <p class="hidden">Safe, reliable and friendly B&B accommodation.</p>
+            <a href="./Vuokraa/englanti.html"><button class="hidden">Rent a cottage </button></a>
+            <img src="" alt="..." class="hidden">
+        </div>
+    </div>
+
+    
+
+    <div class="MV" id="MV">
+        <div class="MV_Cont">
+            <h1 class="hidden">Rooms</h1>
+            <div class="things">
+                <div class="card hidden">
+                    <img src="" alt="kuva">
+                    <div class="MV_text">
+                       <p>Room for 1-6 pers.</p>
+                        <ul>
+                            <li>fridge</li>
+                            <li>microwave</li>
+                            <li>hob</li>
+                            <li>coffee machine</li>
+                            <li>water boiler</li>
+                            <li>radio</li>
+                            <li>dishes</li>
+                            <li>sheets</li>
+                            <li>towels</li>
+                        </ul>  
+                    </div>
+                    
+                </div>
+                <div class="card hidden" style="transition-delay: 200ms;">
+                    <img src="" alt="kuva">
+                    <div class="MV_text">
+                        <p>Room for 1-2 pers.</p>
+                        <ul>
+                            <li>coffee machine</li>
+                            <li>water boiler</li>
+                            <li>sheets</li>
+                            <li>towels</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="card hidden" style="transition-delay: 400ms;">
+                    <img src="" alt="kuva">
+                    <div class="MV_text">
+                        <p>Room for 1-2 pers. in the  sauna building</p>
+                        <ul>
+                            <li>sheets</li>
+                            <li>towels</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="hinnat" id="hinnat">
+        <div class="hinnatCont">
+            <h1 class="hidden">Prices</h1>
+            <div class="hinnatCards">
+                <div class="hinnatCard hidden">
+                    <i class="fa-solid fa-bed"></i>
+                    <h2>35 € / pers. / night</h2>
+                </div>
+                <div class="hinnatCard hidden">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h2>Breakfast 7 € / pers. (by separate agreement)</h2>
+                </div>
+                <div class="hinnatCard hidden">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h2>Groups by agreement</h2>
+                </div>
+                <div class="hinnatCard hidden">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h2>Payment: cash</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ML" id="ML">
+        <div class="ML_Cont">
+            <h1 class="hidden">We offer</h1>
+            <div class="ML_Cards">
+                <div class="ML_Card hidden">
+                    <img src="" alt="kuva">
+                    <h2>Sauna in separate building</h2>
+                </div>
+                <div class="ML_Card hidden" style="transition-delay: 200ms;">
+                    <img src="" alt="kuva">
+                    <h2>Biotoilet in separate building</h2>
+                </div> 
+                <div class="ML_Card hidden" style="transition-delay: 400ms;">
+                    <img src="" alt="kuva">
+                    <h2>Out door grill</h2>
+                </div> 
+                <div class="ML_Card hidden">
+                    <img src="" alt="kuva">
+                    <h2>Smoke oven</h2>
+                </div>   
+                <div class="ML_Card hidden" style="transition-delay: 200ms;">
+                    <img src="" alt="kuva">
+                    <h2>Bicycles (2 pcs)</h2>
+                </div>
+                <div class="ML_Card hidden" style="transition-delay: 400ms;">
+                    <img src="" alt="kuva">
+                    <h2>Boat (2 km)</h2>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="sijainti" id="sijainti">
+        <div class="sijaintiCont">
+            <h1 class="hidden">Location</h1>
+            <div class="sijaintiCont2">
+                <div class="map hidden">
+                    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.60260794234986!2d25.3388200973933!3d61.286633901771836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468fca1700d30f6d%3A0xd00982ea467f6e6d!2sB%26B%20Punainen%20Tupa!5e0!3m2!1sfi!2sfi!4v1754491780707!5m2!1sen!2sen" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="sijaintiText">
+                    <h2 class="hidden">See also:</h2>
+                    <div class="sijaintiBtns">
+                        <p class="sijaintiP hidden">Lake Päijänne 2 km  with beach and boat</p>
+                        <p class="sijaintiP hidden">Supermarket, post office, busstation 10 km</p>
+                        <p class="sijaintiP hidden">Päijänne national park 10 km</p>
+                        <p class="sijaintiP hidden">Railway station, Lahti 45 km</p>
+                        <p class="sijaintiP hidden">Airport, Helsinki 145 km</p>
+                    </div>
+                    <p class="sijaintiP pm isactive hidden">Red Cottage</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="HH" id="HH">
+        <div class="HH_Cont">
+            <h1 class="hidden">Good to know</h1>
+            <div class="HH_Cards">
+                <div class="HH_Card hidden">
+                    <h2>Pets are welcome</h2>
+                    <i class="fa-solid fa-dog"></i>
+                </div>
+                <div class="HH_Card hidden" style="transition-delay: 200ms;">
+                    <h2>Owner lives on same premises</h2>
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <div class="HH_Card hidden">
+                    <h2>Good hiking terrains, Ilvespolku-path 5 km</h2>
+                    <i class="fa-solid fa-person-running"></i>
+                </div>
+                <div class="HH_Card hidden" style="transition-delay: 200ms;">
+                    <h2>Excellent mushroom and berry  grounds nearby</h2>
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+                <div class="HH_Card hidden">
+                    <h2>A bike route passes by the house</h2>
+                    <i class="fa-solid fa-person-biking"></i>
+                </div>
+                <div class="HH_Card hidden" style="transition-delay: 200ms;">
+                    <h2>We speak: English, German,  Swedish, Finnish</h2>
+                    <i class="fa-solid fa-language"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="yhteystiedot" id="yt">
+        <div class="ytCont" id="yt">
+            <div class="ytLeft">
+               
+                
+                <div class="yts">
+                     <h1>Elina Luukka</h1>
+                    <div class="yt">
+                        <h2>+358-(0)40-5404384</h2>
+                    </div>
+                    <div class="yt">
+                        <h2>elina.luukka@netti.fi</h2>
+                    </div>
+                    <div class="yt">
+                        <h2>Häntämäentie 3, 17470 Maakeski, Padasjoki, Finland</h2>
+                    </div>
+                    <div class="yt">
+                        <h2>B&B Punainen Tupa</h2>
+                    </div>
+                </div>
+                <div class="yts">
+                    <div class="yt">
+                        <h1>Paavo Luukka</h1>
+                    </div>
+                    <div class="yt">
+                        <h2>+358-(0)40-7625503</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="ytRight">
+                <img src="./kuvat/B&B Punainen Tupa Logo.jpg" alt="Logo">
+            </div>
+        </div>
+    </div>
+
+    <script src="./en.js"></script>
+</body>
+</html>
