@@ -151,7 +151,7 @@ body{
     align-items: center;
 }
 
-.liputCont button{
+.liputCont a{
     width: 30px;
     height: 18px;
     cursor: pointer;
@@ -160,12 +160,19 @@ body{
     border: 0px solid transparent;
     transition: all .3s ease, border .1s ease;
     box-shadow: var(--shadow), 0px 0px 6px hsla(0, 0%, 0%, 0.6);
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
-.liputCont button:hover{
-    border: 1px solid #fff;
-    scale: 1.3 1.3;
+.liputCont a img{
+    width: 100%;
+    height: 100%;
+}
 
+.liputCont a:hover{
+    border: 2px solid #fff;
+    scale: 1.3 1.3;
 }
 /* #endregion */
 
