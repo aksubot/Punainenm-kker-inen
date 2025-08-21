@@ -14,7 +14,7 @@ html{
     --border: oklch(0.6 0 20);
     --border-muted: oklch(0.7 0 20);
     --primary: oklch(0.4 0.1 20);
-    --secondary: oklch(0.4 0.1 200);
+    --secondary: oklch(85.876% 0.14591 205.869);
     --danger: oklch(0.5 0.05 30);
     --warning: oklch(0.5 0.05 100);
     --success: oklch(0.5 0.05 160);
@@ -60,13 +60,14 @@ body.dark{
     font-family: 'open sans', Helvetica, Arial, sans-serif;
 
     overflow-y:initial;
-}
 
+    font-family: var(--ff);
+}
 body{
     overflow-x: hidden;
     overflow-x: clip !important;    
 
-    background-image: url("../kuvat/punainen-puu-tausta-käännetty.jpg");
+    background-image: url("../kuvat/punainen-puu-tausta-käännetty.webp");
     background-size: 400px;
 }
 .overlay{
@@ -110,6 +111,20 @@ body{
     filter: blur(0px);
 }
 
+.first h2{
+    margin-bottom: 50px;
+    font: var(--h2);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.first h1:nth-child(2){
+    text-align: center;
+    font: var(--h1);
+    font-size: 1.6rem;
+    margin-top: 50px;
+    padding: 2% 10%;
+}
 
 /*#region NAVBAR*/
 
@@ -226,11 +241,19 @@ body{
 
 .firstCont h1{
     font: var(--h1);
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
-.firstCont button{
+.firstCont p{
+    color: hsl(0, 0%, 50%);
+    margin: 5px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.sijainti button{
     background-color: #E22222;
     border: none;
     border-radius: 5px;
@@ -268,9 +291,10 @@ body{
     }
 }
 
-.firstCont a{
+.sijainti a{
     width: fit-content;
     margin: auto;
+    display: block;
 }
 
 /* #endregion */
@@ -284,7 +308,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 30px;
 }
 
 .row, .row{
@@ -303,7 +326,6 @@ body{
     padding: 30px 0;
     margin: 10px 0;
 
-    box-shadow: var(--shadow), 0px 0px 5px hsla(0, 0%, 0%, 0.06);
 
     display: flex;
     flex-direction: column;
@@ -316,12 +338,14 @@ body{
 .text{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .HH_Card h2{
     font: var(--h2);
-    padding: 0 20px;
     width: calc(100% - 90px);
+    padding: 0 20px;
+    margin: 0;
 }
 
 .HH_Card i{
@@ -332,17 +356,232 @@ body{
 .HH_img{
     width: 48%;
     height: 100%;
-    background-image: url(../kuvat/punainen_mökkeröinen.jpg);
-    background-position: center;
+    background-position: 100% 20%;
     background-size: cover;
+    background-repeat: no-repeat;
 
     margin: 10px 0;
     border-radius: 5px;
 
-    box-shadow: var(--shadow), 0px 0px 5px hsla(0, 0%, 0%, 0.06);
+
+    filter: brightness(100%) contrast(110%);
+}
+
+.HH_img:nth-child(1){
+    background-image: url("../kuvat/Mökkeröinen.jpg");
+}
+
+.HH_img:nth-child(2){
+    background-image: url("../kuvat/Mökkeröinen_terassi.jpg");
 }
 
 /* #endregion */
+
+/* #region ML */
+
+.dd{
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 150px 0;
+}
+
+.dd.active{
+    padding-bottom: 0;
+}
+
+.ddBtn{
+    display: flex;
+    margin: auto;
+    padding: 0 20px;
+    width: fit-content;
+    height: 60px;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #E22222;
+
+    user-select: none;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+
+    font: var(--p);
+}
+
+.arrow{
+    font-size: 24px;
+    margin-left: 10px;
+    rotate: -90deg;
+
+    transition: all 0.3s ease;
+}
+
+.arrow.active{
+    rotate: 450deg;
+}
+
+.ddBtn:hover{
+    background-color: turquoise;
+    color: #2f2f2f;
+}
+
+.dd h2{
+    font: var(--h2);
+    font-size: 1.5rem;
+}
+
+.ML_Cards{
+    padding: 7%;
+    padding-top: 0%;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: none;
+}
+
+.ML_Cards.active{
+    display: flex;
+}
+
+.ML_Card{
+    width: 30%;
+    margin: 20px 0;
+}
+
+.ML-img{
+    min-width: 100%;
+    height: auto; /* Temporary */
+    padding-bottom: 100%; /* Temporary */
+    background-color: #8e8c89;
+    border-radius: 5px;
+}
+
+.ML_Card h2{
+    font: var(--h2);
+    margin-top: 10px;
+}
+
+#huussi.ML-img{
+    background-image: url("../kuvat/huussi.jpg");
+    background-size: cover;
+    background-position: center 30%;
+}
+
+#keittio.ML-img{
+    background-image: url("../kuvat/keittiö.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#makuuhuone.ML-img{
+    background-image: url("../kuvat/makuuhuone.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#sauna.ML-img{
+    background-image: url("../kuvat/sauna.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#piha1.ML-img{
+    background-image: url("../kuvat/piha1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#piha2.ML-img{
+    background-image: url("../kuvat/piha2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* #endregion */
+
+/* #region SIJAINTI */
+
+.sijainti{
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.sijaintiCont{
+    padding: 7%;
+}
+
+.sijaintiCont h1{
+    font: var(--h1);
+}
+
+.sijaintiCont2{
+    display: flex;
+    height: 500px;
+}
+
+.map{
+    width: 60%;
+    padding-right: 5%;
+}
+
+.map iframe{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.sijaintiText{
+    width: 40%;
+    position: relative;
+}
+
+.sijaintiText h2{
+    font: var(--h1);
+    font-size: 1.5rem;
+}
+
+.sijaintiText p{
+
+    margin: 10px 0;
+    font: var(--p);
+    padding: 7px 8px;
+
+    border: 2px hsl(0, 0%, 84%) solid;
+
+    border-radius: 5px;
+
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+.sijaintiText p:hover{
+    color: #1d1d1d;
+    scale: 1.06 1.06;
+}
+
+.sijaintiText .isactive{
+    border: 1px #808080 solid;
+    background-color: #E22222 ;
+    color: #fff !important;
+}
+
+
+.sijaintiP.pm{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+}
+
+
+/* #endregion */
+
 
 /* #region YHTEYSTIEDOT */
 
@@ -440,13 +679,14 @@ body{
 }
 
 @media (max-width: 800px){
-    .first,  .yhteystiedot{
+    .first, .ML, .sijainti, .yhteystiedot, .dd{
         width: 90%;
     }
 }
 
+
 @media (max-width: 700px){
-    .first, .yhteystiedot{
+    .first, .yhteystiedot, .sijainti{
         width: 100%;
         margin-bottom: 0;
     }
@@ -463,6 +703,19 @@ body{
     .navbar__menu{
         right: 6%;
     }
+}
+
+@media (max-width: 650px){
+    .ML_Card{
+        width: 45%;
+    }
+
+    .ML_Card:nth-child(2){transition-delay: 200ms !important;}
+    .ML_Card:nth-child(3){transition-delay: 0ms !important;}
+    .ML_Card:nth-child(4){transition-delay: 200ms !important;}
+    .ML_Card:nth-child(5){transition-delay: 0ms !important;}
+    .ML_Card:nth-child(6){transition-delay: 200ms !important;}
+
 }
 
 @media (max-width: 600px){
@@ -498,6 +751,26 @@ body{
     }
 
     .yts:nth-child(2){margin-top: 20px;}
+
+    .sijaintiCont2{ 
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .map{
+        width: 100%;
+        padding: 0;
+        height: 50vh;
+    }
+
+    .sijaintiText{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sijaintiP.pm{
+        position: static;
+    }
 
 }
 

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+
     <link rel="stylesheet" href="./vuokraa.css">
 </head>
 <body>
@@ -41,7 +42,11 @@
 
     <div class="first">
         <div class="firstCont">
-            <h1 class="hidden"> Mökkeröinen vuokrataan</h1>
+            <h1 class="hidden">Vuokrataan mökkeröinen</h1>
+            <p>Vuokraamme myös toista mökkiä Nyystölän kylässä, 
+                <br>
+                Saatavilla vain toukokuusta syyskuun loppuun.
+            </p>
             <div class="HH_Cards">
                 <div class="row">
                     <div class="HH_img hidden">
@@ -49,11 +54,11 @@
                     <div class="HH_Card hidden" style="transition-delay: .2s;">
                         <div class="text">
                             <i class="fa-solid fa-location-dot"></i>
-                            <h2>Padasjoen varrella, 5 km kaupungin keskustasta etelään, Nyystölän kylässä.</h2>
+                            <h2>Mökkeröinen sijaitsee Padasjoella Nyystölän kylässä, 5 km Padasjoen keskustasta etelään. Osoite on Nyystöläntie 394.</h2>
                         </div>
                         <div class="text">
-                            <i class="fa-solid fa-road"></i>
-                            <h2>Päällystetyltä tieltä matkaa mökille vain noin 100 metriä.</h2>
+                            <i class="fa-solid fa-euro-sign"></i>
+                            <h2>Hinta: 100€ / vrk / 2hlö, tilaa on kahdelle</h2>
                         </div>
                     </div>
                 </div>
@@ -62,11 +67,11 @@
                     <div class="HH_Card hidden">
                         <div class="text">
                             <i class="fa-solid fa-circle-info"></i>
-                            <h2>Iso tontti, jolla jopa pieni lampi. Lammen lisäksi tontilla on mökkeröinen, jossa on tilat kahdelle, puucee ja peräkärrysauna.</h2>
+                            <h2>Iso tontti, jolla on jopa pieni lampi. Lammen lisäksi tontilla on mökkeröinen, jossa on tilat kahdelle, puucee ja peräkärrysauna.</h2>
                         </div>
                         <div class="text">
-                            <i class="fa-solid fa-caravan"></i>
-                            <h2>Piha toimii tarpeen ja mahdollisuuksien mukaan myös karavaanarin matkaparkkina.</h2>
+                            <i class="fa-solid fa-faucet-drip"></i>
+                            <h2>Mökkeröisellä on kunnallinen vesi, joka on juomakelpoista.</h2>
                         </div>
                         
                     </div>
@@ -75,11 +80,64 @@
                 </div>
                 
             </div>
-            <a href="../index.html"><button class="hidden">Kotisivulle</button></a>
+        </div>
+        <h1>Jos tahdot vuokrata mökkiä pidemmäksi aikaa kysy tarjous!</h1>
+    </div>
+
+    <div class="dd">
+        <div class="ddBtn">
+            <h2>Kuvat</h2> <h2 class="arrow">></h2>
+        </div>
+        <div class="ML_Cards">
+            <div class="ML_Card hidden">
+                <div class="ML-img" id="huussi"></div>
+                <h2>Huussi</h2>
+            </div>
+            <div class="ML_Card hidden" style="transition-delay: 200ms;">
+                <div class="ML-img" id="keittio"></div>
+                <h2>Keittiö</h2>
+            </div> 
+            <div class="ML_Card hidden" style="transition-delay: 400ms;">
+                <div class="ML-img" id="makuuhuone"></div>
+                <h2>makuuhuone</h2>
+            </div> 
+            <div class="ML_Card hidden">
+                <div class="ML-img" id="sauna"></div>
+                <h2>Sauna</h2>
+            </div>
+            <div class="ML_Card hidden" style="transition-delay: 200ms;">
+                <div class="ML-img" id="piha1"></div>
+                <h2>Piha</h2>
+            </div>
+            <div class="ML_Card hidden" style="transition-delay: 400ms;">
+                <div class="ML-img" id="piha2"></div>  
+                <h2>Piha</h2>
+            </div>  
         </div>
     </div>
 
-
+    <div class="sijainti" id="sijainti">
+        <div class="sijaintiCont">
+            <h1 class="hidden">Sijainti</h1>
+            <div class="sijaintiCont2">
+                <div class="map hidden">
+                    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1914.959746287605!2d25.30323077712866!3d61.317103275637336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468fb60f62b540bd%3A0xec063aa4735f9293!2sNyyst%C3%B6l%C3%A4ntie%20394%2C%2017510%20Padasjoki!5e0!3m2!1sfi!2sfi!4v1755668597718!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="sijaintiText">
+                    <h2 class="hidden">Katso myös:</h2>
+                    <div class="sijaintiBtns">
+                        <p class="sijaintiP hidden">Monuksen uimaranta, 2 km</p>
+                        <p class="sijaintiP hidden">Kauppa, posti, linja-autoasema ja apteekki 5 km</p>
+                        <p class="sijaintiP hidden">Päijänteen kansallispuisto 5 km</p>
+                        <p class="sijaintiP hidden">Lahti, rautatieasema 50 km</p>
+                        <p class="sijaintiP hidden">Helsinki-Vantaan lentoasema 150 km</p>
+                    </div>
+                    <p class="sijaintiP pm isactive hidden">Mökkeröinen</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
     <div class="yhteystiedot" id="yt">
         <div class="ytCont" id="yt">
