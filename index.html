@@ -76,17 +76,17 @@
                         </a>
                     </div>
                 </li>
-                <li class="navbar__item">
-                    <div class="navbarText">
-                        <a href="#yt" class="navbar__links">
-                            yhteystiedot
-                        </a>
-                    </div>
-                </li>
                 <li class="navbar__item" style="list-style: none;">
                     <div class="navbarText">
                         <a href="#VM" class="navbar__links">
                             Vuokraa Mökkeröinen
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <div class="navbarText">
+                        <a href="#yt" class="navbar__links">
+                            yhteystiedot
                         </a>
                     </div>
                 </li>
@@ -102,7 +102,7 @@
         <div class="firstCont">
             <h1 class="hidden">Tervetuloa Punaiseen<br>Tupaan</h1>
             <p class="hidden">Turvallinen, luotettava ja ystävällinen B&B asunto.</p>
-            <img src="" alt="..." class="hidden">
+            <div class="firstImg" style="background-image: url(../kuvat/punainen-tupa.jpg);"></div>
         </div>
     </div>
 
@@ -111,46 +111,61 @@
     <div class="MV" id="MV">
         <div class="MV_Cont">
             <h1 class="hidden">Majoitusvaihtoehdot</h1>
+
+            <div class="bigCard">
+                <h2>Kaikille huoneille on käytössä tupa, jossa on:</h2>
+                <p>
+                    <ul>
+                        <li>Jääkaappi</li>
+                        <li>Mikro</li>
+                        <li>Keittolevy</li>
+                        <li>Kahvinkeitin</li>
+                        <li>Vedenkeitin</li>
+                        <li>Radio</li>
+                        <li>Astiat</li>
+                        <li>Lakanat</li>
+                        <li>Pyyhkeet</li>
+                        <li>Pieni uuni</li>
+                    </ul>
+                    
+                </p>
+            </div>
+
             <div class="things">
                 <div class="card hidden">
-                    <img src="" alt="kuva">
+                    <div class="pics" style="display: flex;">
+                        <div class="MV-pic" style="background-image: url(../kuvat/6hlötalo.jpg);"></div>
+                        <div class="MV-pic" style="background-image: url(../kuvat/6hlötalo2.jpg);"></div>
+                    </div>
                     <div class="MV_text">
                        <p>huone 1-6 henkilölle</p>
-                        <ul>
-                            <li>jääkaappi</li>
-                            <li>mikro</li>
-                            <li>keittolevy</li>
-                            <li>kahvinkeitin</li>
-                            <li>vedenkeitin</li>
-                            <li>radio</li>
-                            <li>astiat</li>
-                            <li>lakanat</li>
-                            <li>pyyhkeet</li>
-                        </ul> 
                     </div>
                     
                 </div>
                 <div class="card hidden" style="transition-delay: 200ms;">
-                    <img src="" alt="kuva">
+                    <div class="pics" style="display: flex;">
+                        <div class="MV-pic" style="background-image: url(../kuvat/2hlötalo.jpg);"></div>
+                        <div class="MV-pic" style="background-image: url(../kuvat/2hlötalo2.jpg);"></div>
+                    </div>
                     <div class="MV_text">
                         <p>huone 1-2 henkilölle</p>
-                        <ul>
-                            <li>kahvinkeitin</li>
-                            <li>vedenkeitin</li>
-                            <li>lakanat</li>
-                            <li>pyyhkeet</li>
-                        </ul>
                     </div>
                     
                 </div>
                 <div class="card hidden" style="transition-delay: 400ms;">
-                    <img src="" alt="kuva">
+                    <div class="pics" style="display: flex;">
+                        <div class="MV-pic" id="MV-pic" style="background-image: url(../kuvat/saunakammari.jpg); width: 100%;"></div>
+                    </div>
                     <div class="MV_text">
-                        <p>huone 1-2 henkilölle saunarakennuksessa</p>
-                        <ul>
-                            <li>lakanat</li>
-                            <li>pyyhkeet</li>
-                        </ul>
+                        <p>huone 1 henkilölle saunarakennuksessa</p>
+                    </div>
+                </div>
+                <div class="card hidden" style="transition-delay: 400ms;">
+                    <div class="pics" style="display: flex;">
+                        <div class="MV-pic" id="MV-pic" style="background-image: url(../kuvat/huvimaja.jpg); width: 100%;"></div>
+                    </div>
+                    <div class="MV_text">
+                        <p>huone 1 henkilölle huvimajassa</p>
                     </div>
                 </div>
                 
@@ -164,15 +179,15 @@
             <div class="hinnatCards">
                 <div class="hinnatCard hidden">
                     <i class="fa-solid fa-bed"></i>
-                    <h2> 35€ / hlö / yö</h2>
+                    <h2> 40€ / hlö / yö</h2>
                 </div>
                 <div class="hinnatCard hidden">
                     <i class="fa-solid fa-utensils"></i>
                     <h2>Aamiainen erillisellä sopimuksella 7€ /hlö</h2>
                 </div>
                 <div class="hinnatCard hidden">
-                    <i class="fa-solid fa-people-group"></i>
-                    <h2>Ryhmille sopimuksen mukaan</h2>
+                    <i class="fa-solid fa-child"></i>
+                    <h2>Alle 12-vuotiaat lapset 0€</h2>
                 </div>
                 <div class="hinnatCard hidden">
                     <i class="fa-solid fa-credit-card"></i>
@@ -185,29 +200,30 @@
     <div class="ML" id="ML">
         <div class="ML_Cont">
             <h1 class="hidden">Meiltä Löytyy</h1>
+            <p>Käyttö kuuluu hintaan.</p>
             <div class="ML_Cards">
                 <div class="ML_Card hidden">
-                    <img src="" alt="kuva">
+                    <div class="ML-img" style="background-image: url(../kuvat/tupaSauna.jpg);"></div>
                     <h2>Sauna erillisessä rakennuksessa</h2>
                 </div>
                 <div class="ML_Card hidden" style="transition-delay: 200ms;">
-                    <img src="" alt="kuva">
+                    <div class="ML-img" style="background-image: url(../kuvat/biowc.jpg);"></div>
                     <h2>Biolanwc erillisessä rakennuksessa</h2>
                 </div> 
                 <div class="ML_Card hidden" style="transition-delay: 400ms;">
-                    <img src="" alt="kuva">
-                    <h2>Ulkogrilli</h2>
+                    <div class="ML-img" style="background-image: url(../kuvat/ulkogrilli.jpg);"></div>
+                    <h2>Ulkogrilli ja savustusuuni</h2>
                 </div> 
                 <div class="ML_Card hidden">
-                    <img src="" alt="kuva">
-                    <h2>Savustusuuni</h2>
+                    <div class="ML-img" style="background-image: url(../kuvat/puutarha.jpg);"></div>
+                    <h2>Puutarha</h2>
                 </div>   
                 <div class="ML_Card hidden" style="transition-delay: 200ms;">
-                    <img src="" alt="kuva">
+                    <div class="ML-img" style="background-image: url(../kuvat/pyörät.jpg);"></div>
                     <h2>polkupyöriä 2 kpl</h2>
                 </div>
                 <div class="ML_Card hidden" style="transition-delay: 400ms;">
-                    <img src="" alt="kuva">
+                    <div class="ML-img" style="background-image: url(../kuvat/vene.jpg);"></div>
                     <h2>vene (2km)</h2>
                 </div>  
             </div>

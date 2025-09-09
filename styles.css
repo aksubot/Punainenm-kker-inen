@@ -312,7 +312,7 @@ a:active { text-decoration: none; }
 .first{
     background: #FFF;
     width: 80%;
-    height: 100vh;
+    height: 120vh;
     margin: auto;
     border-radius: 5px 5px 0 0;
 
@@ -341,12 +341,15 @@ a:active { text-decoration: none; }
     margin: 10px 0;
 }
 
-.firstCont img{
+.firstImg{
     width: 100%;
     height: 100%;
     background: #8e8c89;
     border-radius: 5px;
     text-align: center;
+
+    background-size: cover;
+    background-position: center;
 }
 
 /* #endregion */
@@ -382,30 +385,60 @@ a:active { text-decoration: none; }
     justify-content: space-between;
     height: fit-content;
     width: 100%;
+    flex-wrap: wrap;
+
+    row-gap: 50px;
+    gap: 50px;
+}
+
+.bigCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    border-radius: 5px;
+
+    margin-bottom: 50px;
+
+    border: hsl(0, 0%, 84%) 2px solid;
+}
+
+.bigCard h2{
+    margin-bottom: 20px;
 }
 
 .card{
-    width: 33%;
+    width: calc(50% - 50px);
 
     display: flex;
     flex-direction: column;
 
     border: hsl(0, 0%, 84%) 2px solid;
 
-    padding: 10px;
+    padding: 20px;
 
     border-radius: 5px;
 
     min-height: 300px;
 }
 
-.card img{
-    width: 100%;
+.pics{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.MV-pic{
+    width: 50%;
     height: 0;
     padding-bottom: 100%;
-    background-color: #8e8c89;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card p{
@@ -414,7 +447,7 @@ a:active { text-decoration: none; }
     font-size: 1rem;
 }
 
-.card li{
+.bigCard li{
     font: var(--p);
     padding: 7px 8px;
 
@@ -424,22 +457,25 @@ a:active { text-decoration: none; }
 
 
     transition: all 0.3s ease;
+
+    width: 130px;
 }
 
-.card li:hover{
+.bigCard li:hover{
     border: 2px #808080 solid;
     transform: translateY(-5%);
 }
 
-.card li::before{
+.bigCard li::before{
     content: "• ";
 }
 
-.card ul{
+.bigCard ul{
 
     margin-top: 10px;
 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     gap: 10px;
@@ -548,6 +584,10 @@ a:active { text-decoration: none; }
     font: var(--h1);
 }
 
+.ML_Cont p{
+    color: hsl(0, 0%, 50%);
+}
+
 .ML_Cards{
     width: 100%;
     height: 100%;
@@ -561,11 +601,14 @@ a:active { text-decoration: none; }
     margin: 20px 0;
 }
 
-.ML_Card img{
+.ML-img{
     min-width: 100%;
     height: auto; /* Temporary */
     padding-bottom: 92%; /* Temporary */
     background-color: #8e8c89;
+
+    background-size: cover;
+    background-position: center;
 }
 
 .ML_Card h2{
@@ -846,39 +889,6 @@ a:active { text-decoration: none; }
 
 @media (max-width: 1280px){
 
-    .MV h1{
-        margin: 0;
-    }
-
-    .things{
-        flex-wrap: wrap;
-    }
-
-    .card{
-        width: 100%;
-        height: 45vh;
-
-        transition-delay: 0s !important;
-
-        flex-direction: row;
-
-        margin-top: 20px;
-
-        max-height: 300px;
-    }
-
-    .card img{
-        width: 45%;
-        height: 100%;
-        padding-bottom: 0;
-    }
-
-    .MV_text{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        width: 55%;
-    }
 }
 
 @media (max-width: 1000px){
@@ -903,13 +913,13 @@ a:active { text-decoration: none; }
 }
 
 @media (max-width: 800px){
-    .first, .MV, .hinnat, .ML, .sijainti, .HH, .yhteystiedot{
+    .first, .MV, .hinnat, .ML, .sijainti, .HH, .yhteystiedot, .VM{
         width: 90%;
     }
 }
 
 @media (max-width: 700px){
-    .first, .MV, .hinnat, .ML, .sijainti, .HH, .yhteystiedot{
+    .first, .MV, .hinnat, .ML, .sijainti, .HH, .yhteystiedot, .VM{
         width: 100%;
     }
 
@@ -959,24 +969,28 @@ a:active { text-decoration: none; }
 }
 
 @media (max-width: 600px){
+
+    .pics{
+        gap: none;
+    }
+
+    .MV-pic{
+        width: 35vw;
+    }
+
+
     .card{
-        flex-direction: column;
         align-items: center;
         height: fit-content;
 
         max-height: none;
-    }
 
-    .card img{
-        width: 100%;
-        padding-bottom: 100%;
-        max-height: none;
-    }
-
-    .MV_text{
         width: 100%;
     }
 
+    .MV-pic#MV-pic{
+        width: calc(70vw + 20px) !important;
+    }
 
 
     .sijaintiCont2{ 
